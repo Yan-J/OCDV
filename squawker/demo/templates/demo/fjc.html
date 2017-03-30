@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+<!--
+	Landed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>My Ally</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+        {% load static %}
+        <link rel="stylesheet" href="{% static "assets/css/main.css" %}" />
+        <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+        <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+        <!-- Scripts -->
+        <script src="{% static "assets/js/jquery.min.js" %}"></script>
+        <script src="{% static "assets/js/jquery.scrolly.min.js" %}"></script>
+        <script src="{% static "assets/js/jquery.dropotron.min.js" %}"></script>
+        <script src="{% static "assets/js/jquery.scrollex.min.js" %}"></script>
+        <script src="{% static "assets/js/skel.min.js" %}"></script>
+        <script src="{% static "assets/js/util.js" %}"></script>
+        <!--[if lte IE 8]><script src="{% static "assets/js/ie/respond.min.js" %}"></script><![endif]-->
+        <script src="{% static "assets/js/main.js" %}"></script>
+        <script>
+            $(document).onload(function(e) {
+                var $input = $('#refresh');
+                $input.val() == 'yes' ? location.reload(true) : $input.val('yes');
+            });
+        </script>
+        <script>
+            $(window).bind("pageshow", function(event) {
+                if (event.originalEvent.persisted) {
+                    window.location.reload()
+                }
+            });
+        </script>
+    </head>
+	<body class="landing">
+    <input type="hidden" id="refresh" value="no">
+			<!-- Header -->
+    <header id="header">
+        <ul>
+            <li id="escape"><a href="escape.html" class="button small fit">Exit</a></li>
+            <li><h1 id="logo"><a href="index.html">My Ally</a></h1></li>
+            <li>
+                <nav id="nav">
+                    <ul>
+                        <li><a herf="">Services Offered</a></li>
+                        <li><a href="testimonial.html">Testimonials</a></li>
+                        <li>
+                            <a href="fjc.html">FJC Virtual Tour</a>
+                            <ul>
+                                <li><a href="tour-manhattan.html">Manhattan</a></li>
+                                <li><a href="#">Queens</a></li>
+                                <li><a href="#">Bronx</a></li>
+                                <li><a href="#">Staten Island</a></li>
+                                <li><a herf="#">Brooklyn</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="phone-safe.html">Tech Safety Tips</a>
+                        <li><a href="prepare-visit.html">Prepare For Your FJC Visit</a></li>
+                        <li><a href="FAQs.html">FAQs</a></li>
+                        <li><a href="log-in.html">My FJC Portal</a></li>
+                    </ul>
+                </nav>
+            </li>
+        </ul>
+    </header>
+
+			<!-- Banner -->
+            <div id="main" class="wrapper style1">
+                <div class="container">
+				<section>
+                    <div class="content" style="text-align: center">
+                        <br>
+                        <header>
+                            <h2>Family Justice Centers</h2>
+                        </header>
+                        <p>
+                            Family Justice Centers (FJC) provide clients access to civil, criminal and social services all under one room. Click here to see a list of all of the services offered.
+
+                        </p>
+                    </div>
+
+			<!-- FJCs -->
+                    <div style="text-align: center">
+                        <h4>NYC Family Justice Centers</h4>
+                    </div>
+                    <div class="box alt">
+                        <div class="row 50% uniform" style="text-align: center">
+                            <div class="4u  12u(xsmall)">
+                                <span class="image fit"><img src="{% static "images/fjc/bronx.jpg" %}" alt="" /></span>
+                                <h4>Bronx</h4>
+                                <p>
+                                    198 East 161st Street<br>
+                                    Bronx, NY 10451<br>
+                                    (718) 508-1222<br>
+                                    Hours of Operation:<br> Monday through Friday<br>
+                                    9:00 a.m. - 5:00 p.m.<br>
+                                </p>
+                                <ul class="actions">
+                                    <li><a href="bronx-fjc.html" class="button">Virtual Tour</a></li>
+                                </ul>
+                            </div>
+                            <div class="4u  12u(xsmall)">
+                                <span class="image fit"><img src="{% static "images/fjc/brooklyn.jpg" %}" alt="" /></span>
+                                <h4>Brooklyn</h4>
+                                <p>
+                                    350 Jay St, Brooklyn, NY 11201<br>
+                                    (718) 250-5111 and select 6<br>
+                                    Hours of Operation: <br>Monday through Friday<br>
+                                    9:00 a.m. - 5:00 p.m.<br>
+                                </p>
+                                <ul class="actions">
+                                    <li><a href="brooklyn-fjc.html" class="button">Virtual Tour</a></li>
+                                </ul>
+                            </div>
+                            <div class="4u  12u(xsmall)">
+                                <span class="image fit"><img src="{% static "images/fjc/manhattan.jpg" %}" alt="" /></span>
+                                <h4>Manhattan</h4>
+                                <p>
+                                    80 Centre St., New York, NY 10013<br>
+                                    (212) 602-2800<br>
+                                    Hours of Operation: <br>
+                                    Monday through Friday <br>9:00 a.m. - 5:00 p.m.
+                                </p>
+                                <ul class="actions">
+                                    <li><a href="tour-manhattan.html" class="button">Virtual Tour</a></li>
+                                </ul>
+                            </div>
+                            <div class="4u  12u(xsmall)">
+                                <span class="image fit"><img src="{% static "images/fjc/staten_island.jpg" %}" alt="" /></span>
+                                <h4>Staten Island</h4>
+                                <p>
+                                    126 Stuyvesant Place
+                                    Staten Island, NY 10301 <br>
+                                    (718) 697-4300<br>
+                                    Hours of Operation:<br> Monday through Friday<br>
+                                    9:00 a.m. - 5:00 p.m.
+                                </p>
+                                <ul class="actions">
+                                    <li><a href="staten_island-fjc.html" class="button">Virtual Tour</a></li>
+                                </ul>
+                            </div>
+                            <div class="4u  12u(xsmall)">
+                                <span class="image fit"><img src="{% static "images/fjc/queens.jpg" %}" alt="" /></span>
+                                <h4>Queens</h4>
+                                <p>
+                                    126-02 82nd Ave, Kew Gardens, NY 11415<br>
+                                    (718) 575-4500<br>
+                                    Hours of Operation:<br> Monday through Friday<br> 9:00 a.m. - 5:00 p.m.
+                                </p>
+                                <ul class="actions">
+                                    <li><a href="queens-fjc.html" class="button">Virtual Tour</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+
+			</section>
+            </div>
+            </div>
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="#" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="#" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled. All rights reserved.</li>
+					</ul>
+				</footer>
+
+		</div>
+
+
+      </body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE HTML>
+<!--
+	Landed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+    <title>Incident log</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    {% load static %}
+    <link rel="stylesheet" href="{% static "assets/css/main.css" %}" />
+    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+    <link rel="stylesheet" type="text/css" href="{% static "assets/css/mobipick.css" %}" />
+    <script type="text/javascript" src="{% static "assets/external/xdate.js" %}"></script>
+    <script type="text/javascript" src="{% static "assets/external/xdate.i18n.js" %}"></script>
+    <script type="text/javascript" src="{% static "assets/js/mobipick.js" %}"></script>
+    <script src="{% static "assets/js/jquery.min.js" %}"></script>
+    <script src="{% static "assets/js/jquery.scrolly.min.js" %}"></script>
+    <script src="{% static "assets/js/jquery.dropotron.min.js" %}"></script>
+    <script src="{% static "assets/js/jquery.scrollex.min.js" %}"></script>
+    <script src="{% static "assets/js/skel.min.js"%}"></script>
+    <script src="{% static "assets/js/util.js"%}"></script>
+    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+    <script src="{%static "assets/js/main.js"%}"></script>
+    <script>
+    $(document).ready(function(e) {
+        var $input = $('#refresh');
+        $input.val() == 'yes' ? location.reload(true) : $input.val('yes');
+    });
+    </script>
+    <script>
+        $(window).bind("pageshow", function(event) {
+            if (event.originalEvent.persisted) {
+                window.location.reload()
+            }
+        });
+    </script>
+</head>
+<body>
+<div id="page-wrapper">
+
+    <!-- Header -->
+    <header id="header">
+        <ul>
+            <li id="escape"><a href="escape.html" class="button small fit">Exit</a></li>
+            <li><h1 id="logo"><a href="index.html">My Ally</a></h1></li>
+            <li>
+                <nav id="nav">
+                    <ul>
+                        <li><a herf="">Services Offered</a></li>
+                        <li><a href="testimonial.html">Testimonials</a></li>
+                        <li>
+                            <a href="fjc.html">FJC Virtual Tour</a>
+                            <ul>
+                                <li><a href="tour-manhattan.html">Manhattan</a></li>
+                                <li><a href="#">Queens</a></li>
+                                <li><a href="#">Bronx</a></li>
+                                <li><a href="#">Staten Island</a></li>
+                                <li><a herf="#">Brooklyn</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="phone-safe.html">Tech Safety Tips</a>
+                        <li><a href="prepare-visit.html">Prepare For Your FJC Visit</a></li>
+                        <li><a href="FAQs.html">FAQs</a></li>
+                        <li><a href="log-in.html">My FJC Portal</a></li>
+                    </ul>
+                </nav>
+            </li>
+        </ul>
+    </header>
+
+    <!-- Main -->
+      <div id="main" class="wrapper style1">
+        <div class="container">
+          <header class="major">
+            <h2>Appointment Calendar</h2>
+
+          </header>
+
+    <!-- Form -->
+      <section>
+        <h3>Add a New Appointment</h3>
+
+        <form method="post" action="{% url 'calendar' %}">
+            {% csrf_token %}
+
+        <h4>Date of Appointment? </h4>
+
+        <input type="date" name="cday" min="2016-10-01" style="color:black">
+        <div class="12u$">
+          <br></br>
+          <h4>Time of Appointment?</h4>
+          <div class="select-wrapper">
+            <select name="ctime" id="category">
+              <option value="">- Time -</option>
+              <option value="12:00PM-1:00AM">12:00PM-1:00AM</option>
+              <option value="1:00AM-2:00AM">1:00AM-2:00AM</option>
+              <option value="2:00AM-3:00AM">2:00AM-3:00AM</option>
+              <option value="3:00AM-4:00AM">3:00AM-4:00AM</option>
+              <option value="4:00AM-5:00AM">4:00AM-5:00AM</option>
+              <option value="5:00AM-6:00AM">5:00AM-6:00AM</option>
+              <option value="6:00AM-7:00AM">6:00AM-7:00AM</option>
+              <option value="7:00AM-8:00AM">7:00AM-8:00AM</option>
+              <option value="8:00AM-9:00AM">8:00AM-9:00AM</option>
+              <option value="19:00AM-10:00AM">9:00AM-10:00AM</option>
+              <option value="10:00AM-11:00AM">10:00AM-11:00AM</option>
+              <option value="11:00AM-12:00AM">11:00AM-12:00AM</option>
+              <option value="12:00AM-1:00PM">12:00AM-1:00PM</option>
+              <option value="1:00PM-2:00PM">1:00PM-2:00PM</option>
+              <option value="2:00PM-3:00PM">2:00PM-3:00PM</option>
+              <option value="3:00PM-4:00PM">3:00PM-4:00PM</option>
+              <option value="4:00PM-5:00PM">4:00PM-5:00PM</option>
+              <option value="5:00PM-6:00PM">5:00PM-6:00PM</option>
+              <option value="6:00PM-7:00PM">6:00PM-7:00PM</option>
+              <option value="7:00PM-8:00PM">7:00PM-8:00PM</option>
+              <option value="8:00PM-9:00PM">8:00PM-9:00PM</option>
+              <option value="9:00PM-10:00PM">9:00PM-10:00PM</option>
+              <option value="10:00PM-11:00PM">10:00PM-11:00PM</option>
+              <option value="11:00PM-12:00PM">11:00PM-12:00PM</option>
+            </select>
+          </div>
+
+      </div>
+      <br></br>
+
+      <h4>Location of Appointment?</h4>
+      <div class="row uniform 50%">
+        <div class="12u$">
+          <textarea name="place" id="detail" placeholder="Location" rows="6"></textarea>
+        </div>
+        </div>
+      <br></br>
+
+      <h4>Who are you meeting with?</h4>
+      <div class="row uniform 50%">
+        <div class="12u$">
+          <textarea name="people" id="detail" placeholder="People" rows="6"></textarea>
+        </div>
+      </div>
+          <br></br>
+
+          <h4>What do you want your email reminder to say?</h4>
+          <div class="row uniform 50%">
+            <div class="12u$">
+              <textarea name="appoint" id="detail" placeholder="Reminder" rows="6"></textarea>
+            </div>
+
+          </div>
+          <br></br>
+          <h4>Email Address</h4>
+          <div class="row uniform 50%">
+            <div class="12u$">
+              <textarea name="email" id="detail" placeholder="Details" rows="6"></textarea>
+            </div>
+            <div class="12u$">
+              <ul class="actions">
+                <li><input type="submit" value="Save" class="special"  /></li>
+                <li><input type="reset" value="Reset" /></li>
+              </ul>
+            </div>
+          </div>
+        </form>
+      </section>
+
+      <h3>Your Appointments</h3>
+      <div id="appontments">
+          {% if cal_list %}
+          <ol>
+              {% for cal in cal_list %}
+              <li>{{ cal.cal_date }}
+              {{ cal.cal_time }}
+              {{ cal.cal_place }}
+              {{ cal.cal_people }}
+              {{ cal.cal_text }}
+              {{ cal.cal_email}}</li>
+              {% endfor %}
+          </ol>
+          {% endif %}
+      </div>
+
+  </div>
+  </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <ul class="icons">
+            <li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
+            <li><a href="#" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
+            <li><a href="#" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+            <li><a href="#" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+            <li><a href="#" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
+            <li><a href="#" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
+        </ul>
+        <ul class="copyright">
+            <li>&copy; Untitled. All rights reserved.</li>
+        </ul>
+    </footer>
+
+</div>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/jquery.dropotron.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/skel.min.js"></script>
+<script src="assets/js/util.js"></script>
+<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+<script src="assets/js/main.js"></script>
+<script>
+    $(document).ready(function(e) {
+        var $input = $('#refresh');
+        $input.val() == 'yes' ? location.reload(true) : $input.val('yes');
+    });
+</script>
+<script>
+    $(window).bind("pageshow", function(event) {
+        if (event.originalEvent.persisted) {
+            window.location.reload()
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+/*  NYC - Home
+    ------------------
+*/
+
+.main-header {
+  border-bottom: none !important; }
+
+
+.module-content .button-link.black-link.mobile {
+  padding: 18px 0;
+  font-size: 14px; }
+
+/* mobile */
+@media only screen and (max-width: 767px) {
+  
+  .row.programs-row {
+    background: transparent; }
+
+  
+  .row.programs-row .module-divider {
+    display: none; }
+
+  
+  .row.programs-row .module-divider.mobile {
+    display: block; } }
+/* tablet */
+@media only screen and (min-width: 631px) and (max-width: 767px) {
+  
+  .row.programs-row .module-divider {
+    display: none; }
+
+  
+  .row.programs-row .module-divider.mobile {
+    display: block; } }
+/* tablet */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  
+  .row.programs-row .module-divider.mobile {
+    display: none; } }
+/* desktop */
+@media only screen and (min-width: 960px) {
+  
+  .row.programs-row .module-divider.mobile {
+    display: none; } }
+
+.lt-ie8 .row.programs-row .module-divider.mobile {
+  display: none; }
+  
+/* hide captcha */
+iframe[src="about:blank"] {
+	display:none !important;
+}
+
+
+
+
+/*Overide mobile and tablet view for span tags to allow view more button visible */
+
+@media (max-width: 767px) {
+.row [class*="span"] {
+	display: table;
+	float:none;
+	
+}
+
+.module-content .button-link.black-link.mobile{
+	margin-top: 21px;
+	
+}}
+
+/*End Override */
+/* addon */
+.content.scroll-pane label { text-transform: none; }
+p.richtext.mobile { display: none !important; }
+.module-first-visit-alert a.arrow-link.white-link.small:hover {
+  color: rgba(255,255,255,0.8);
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<!--
+	Landed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+    <title>My Ally</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    {% load static %}
+    <link rel="stylesheet" href="{% static "assets/css/main.css" %}" />
+    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+</head>
+<body class="landing">
+<input type="hidden" id="refresh" value="no">
+<!-- Header -->
+<header id="header">
+    <ul>
+        <li id="escape"><a href="escape.html" class="button small fit">Exit</a></li>
+        <li><h1 id="logo"><a href="index.html">My Ally</a></h1></li>
+        <li>
+            <nav id="nav">
+                <ul>
+                    <li><a herf="">Services Offered</a></li>
+                    <li><a href="testimonial.html">Testimonials</a></li>
+                    <li>
+                        <a href="fjc.html">FJC Virtual Tour</a>
+                        <ul>
+                            <li><a href="tour-manhattan.html">Manhattan</a></li>
+                            <li><a href="#">Queens</a></li>
+                            <li><a href="#">Bronx</a></li>
+                            <li><a href="#">Staten Island</a></li>
+                            <li><a herf="#">Brooklyn</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="phone-safe.html">Tech Safety Tips</a>
+                    <li><a href="prepare-visit.html">Prepare For Your FJC Visit</a></li>
+                    <li><a href="FAQs.html">FAQs</a></li>
+                    <li><a href="log-in.html">My FJC Portal</a></li>
+                </ul>
+            </nav>
+        </li>
+    </ul>
+</header>
+
+<!-- Banner -->
+
+<section id="banner">
+    <div class="content">
+        <header>
+            <h2>Welcome to My FJC</h2>
+        </header>
+        <ul class="actions fit">
+            <li><a href="calendar.html" class="button fit">Appointment Calendar</a></li>
+            <br>
+            <li><a href="incident-log.html" class="button fit">Incident Log</a></li>
+        </ul>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer id="footer">
+    <ul class="icons">
+        <li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
+        <li><a href="#" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
+        <li><a href="#" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+        <li><a href="#" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+        <li><a href="#" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
+        <li><a href="#" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
+    </ul>
+    <ul class="copyright">
+        <li>&copy; Untitled. All rights reserved.</li>
+    </ul>
+</footer>
+
+</div>
+
+<!-- Scripts -->
+<script src="{% static "assets/js/jquery.min.js" %}"></script>
+<script src="{% static "assets/js/jquery.scrolly.min.js" %}"></script>
+<script src="{% static "assets/js/jquery.dropotron.min.js" %}"></script>
+<script src="{% static "assets/js/jquery.scrollex.min.js" %}"></script>
+<script src="{% static "assets/js/skel.min.js" %}"></script>
+<script src="{% static "assets/js/util.js" %}"></script>
+<!--[if lte IE 8]><script src="{% static "assets/js/ie/respond.min.js" %}"></script><![endif]-->
+<script src="{% static "assets/js/main.js" %}"></script>
+<script>
+$(document).ready(function(e) {
+    var $input = $('#refresh');
+    $input.val() == 'yes' ? location.reload(true) : $input.val('yes');
+});
+</script>
+<script>
+    $(window).bind("pageshow", function(event) {
+        if (event.originalEvent.persisted) {
+            window.location.reload()
+        }
+    });
+</script>
+</body>
+</html>
